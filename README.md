@@ -26,21 +26,7 @@ let aef_exemple = {
   q0 = 0;
   fetats = [2];
   delta = [(0, 'a', 1); (1, 'b', 2)]
-}
-
-
-## Répartition du travail
-
-Le travail est réparti comme suit :
-
-La première question (définition d’un AEF), la sixième question (module
-Deterministe) et la deuxième partie (Reconnaissance d’un mot par un AEF
-déterministe) du projet ont été gérées par `DIAO Mouhamadou` et le reste du travail à
-savoir les première et troisième parties (questions 2 à 5 et 10 à 12) a été réalisé par
-`HIMMID Brahim`.
-
-
-
+}.
 
 ## Fonctions et modules
 
