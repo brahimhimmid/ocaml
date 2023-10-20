@@ -1,6 +1,6 @@
 (*Question 1*)
 
-type alphabet = char list ;; 
+type alphabet = char list ;;
 type etat = int ;; 
 type q =etat list ;;
 type f = etat list ;; 
@@ -40,7 +40,7 @@ module Correct = struct
         (** La fonction [est_inclus] verifie si tous les éléments de la liste F sont dans la liste Q 
             @param fetats  un sous-ensemble de Q contenant les états acceptants de l’automate 
             @param liste_etats Un ensemble fini d’états de l’automate Q
-            @return Un boulean  *)
+            @return Un boolean  *)
         let rec est_inclus fetats liste_etats =
           match fetats with
           | [] -> true
@@ -50,7 +50,7 @@ module Correct = struct
         (** La fonction [est_etat_utilise] verifie si un état est utilisé comme état source ou cible dans la fonction de transition δ
             @param etat Un etat dans la liste Q
             @param delta  Une liste de transitions 
-            @return Un boulean *)
+            @return Un boolean *)
         let rec est_etat_utilise etat delta =
           match delta with
           | [] -> false
@@ -60,7 +60,7 @@ module Correct = struct
         (** La fonction  [tous_etats_utilises] verifie si tous les états de Q sont utilisés comme états source ou cible
             @param liste_etats Un ensemble fini d’états de l’automate Q 
             @param delta Une liste de transitions 
-            @return Un boulean *)
+            @return Un boolean *)
         let rec tous_etats_utilises liste_etats delta =
           match liste_etats with
           | [] -> true
@@ -82,7 +82,7 @@ module Complet = struct
             @param etat Un etat dans Q
             @param car Un caractére dans Alphabets 
             @param delat la liste des transitions 
-            @return Un boulean *)
+            @return Un boolean *)
         let rec transition_definie etat car delta =
           match delta with
           | [] -> false
@@ -93,7 +93,7 @@ module Complet = struct
             @param etats  Un ensemble fini d’états de l’automate Q 
             @param alphabets la liste des caractéres
             @param delta la liste des transitions
-            @return Un boulean *)
+            @return Un boolean *)
         let rec toutes_transitions_definies etats alphabets delta =
           match etats with
           | [] -> true
@@ -158,7 +158,7 @@ end
 
 (** La fonction [langage_vide] vérifie si l'automate reconnait le langage vide
   @param aef un automate 
-  @return un boulean  *)
+  @return un boolean  *)
   let langage_vide aef =
     aef.delta = [] || aef.fetats = [] ;;
 
